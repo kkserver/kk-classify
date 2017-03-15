@@ -453,7 +453,7 @@ func (S *ClassifyService) HandleClassifyQueryTask(a IClassifyApp, task *Classify
 		args = append(args, q, q)
 	}
 
-	sql.WriteString(" ORDER BY oid ASC,id ASC")
+	sql.WriteString(" ORDER BY pid ASC,oid ASC,id ASC")
 
 	var pageIndex = task.PageIndex
 	var pageSize = task.PageSize
