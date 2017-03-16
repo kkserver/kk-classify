@@ -1,6 +1,8 @@
 FROM alpine:latest
 
-RUN echo "Asia/shanghai" >> /etc/timezone
+COPY ./etc/timezone /etc/timezone
+
+COPY ./etc/localtime /etc/localtime
 
 COPY ./main /bin/kk-classify
 
